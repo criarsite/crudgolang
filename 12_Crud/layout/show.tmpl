@@ -1,0 +1,14 @@
+{{ define "show" }}
+  {{ template "header" }}
+    
+    <h2> Register {{ .ID }} </h2>
+      <p>Name: {{ .Nome }}</p>
+      <p>Email:  {{ .Email }}
+      </p>
+      <br />
+      <div>
+       <a class="btn btn-warning" href="/editar?id={{ .ID }}">Editar</a> 
+       <a class="btn btn-dark" href="/">Voltar</a></p>
+     </div>
+  {{ template "footer" }}
+{{ end }}

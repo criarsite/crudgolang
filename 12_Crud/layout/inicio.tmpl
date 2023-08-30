@@ -1,0 +1,38 @@
+{{ define "inicio"  }}
+{{ template "header"}}
+<br/>
+<a name="" id="" class="btn btn-primary" href="/criar" role="button">Cadastro</a>
+<br/><br/>
+ 
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+{{ range.}}
+        <tr>
+            <td> {{.ID}} </td>
+            <td> {{.Nome}}  </td>
+            <td> {{.Email}}   </td>
+            <td>
+            
+            <a name="" id="" class="btn btn-info" href="/show?id={{.ID}}" role="button">Ler</a>
+            <a name="" id="" class="btn btn-warning" href="/editar?id={{.ID}}" role="button">Editar</a>
+            <a name="" id="" class="btn btn-danger" href="/deletar?id={{.ID}}" role="button">Deletar</a>
+
+        </tr>
+
+{{end}}
+
+    </tbody>
+    </table>
+
+
+<br/>
+{{ template "footer"  }}
+{{end}}

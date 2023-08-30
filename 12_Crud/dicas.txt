@@ -1,0 +1,24 @@
+CREATE DATABASE Alunos
+
+CREATE TABLE Alunos (
+    Id int NOT NULL AUTO_INCREMENT,
+    Nome VARCHAR(250) NOT NULL, 
+    Email VARCHAR(100) NOT NULL,
+    PRIMARY KEY(Id)
+);
+
+INSERT INTO Alunos (Id, Nome, Email)
+VALUES  
+(1, "Shin", "shin@local"),
+(2, "Developer", "dev@local"),
+(3, "Golang", "godev@local");
+
+
+ SELECT * FROM `alunos` LIMIT 1000;
+
+
+go mod init modulo 
+
+  go get -u github.com/go-sql-driver/mysql
+
+  _ "github.com/go-sql-driver/mysql"

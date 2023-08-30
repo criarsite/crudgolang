@@ -1,0 +1,32 @@
+ {{ define "criar"  }}
+{{ template "header"}}
+
+
+ 
+<div class="card">
+    <div class="card-header">   Alunos  </div>
+    <div class="card-body">
+        <form action="/inserir" method="post">
+
+            <div class="form-group">
+                <label for="">Nome</label>
+                <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">Escreva seu nome</small>
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId"
+                    placeholder="">
+                <small id="emailHelpId" class="form-text text-muted">Escreva seu email</small>
+            </div>
+
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+          <a class="btn btn-dark" href="/" role="button">Voltar</a>
+
+        </form>
+    </div>
+
+</div>
+
+{{ template "footer"  }}
+{{end}}
